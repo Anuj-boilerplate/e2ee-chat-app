@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 15% 7%;
+    --foreground: 210 20% 98%;
+
+    --card: 220 15% 10%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 220 15% 10%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 188 90% 55%;
+    --primary-foreground: 220 15% 7%;
+
+    --secondary: 220 15% 14%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 220 15% 16%;
+    --muted-foreground: 210 10% 65%;
+
+    --accent: 188 90% 55%;
+    --accent-foreground: 220 15% 7%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 18%;
+    --ring: 188 90% 55%;
+
+    --radius: 0.75rem;
+    
+    --crypto-success: 142 76% 36%;
+    --crypto-warning: 43 96% 56%;
+    --crypto-data: 210 10% 40%;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(220 15% 10%), hsl(220 15% 7%));
+    --gradient-accent: linear-gradient(135deg, hsl(188 90% 55%), hsl(188 90% 65%));
+    --shadow-glow: 0 0 40px hsl(188 90% 55% / 0.3);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  }
+}
